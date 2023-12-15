@@ -1,9 +1,19 @@
-## PolyGP
+## PolyGP with scikit-learn
 
-This repository hosts some utility functions I used to experiemnt with building polynomial kernels for Gaussian process regression models. 
+**Latest update 1/1/2024**
 
-A brief description of this work can be fould [here](https://alessiot.github.io/dsprojects/...)
+This repository hosts my experiments using _polygp_, the library of Python functions I created to build an optimized Gaussian process regression polynomial kernel.  
 
-In the notebook folder, you can find examples of how I used these 
+A brief description of this work and references to previous/past work can be fould [here](https://alessiot.github.io/dsprojects/...).
 
-Feel free to drop me a line if you are interested in collaborating to expand on this subject.
+The library _polygp_ is based on the [Gaussian process kernels](https://scikit-learn.org/stable/modules/gaussian_process.html) from _scikit-learn_ and the optimization package [_optuna_](https://optuna.readthedocs.io/en/stable/index.html).
+
+The structure of this repository is the following:
+
+polygp-sklearn/
+├── polygp/ [the polygp source code for the package _polygp_]
+├── notebooks/ [set of notebooks using _polygp_]
+
+*Future plan: work with other packages other than scikit-learn.*
+
+Feel free to [drop me](mailto:alessio.tamburro@gmail.com?subject=polygp%20inquiry) a line if you are interested in collaborating on this project.
