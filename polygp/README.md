@@ -2,6 +2,8 @@
 
 **UNDER CONSTRUCTION**
 
+**NOT RELEASED AS PACKAGE YET**
+
 This library of functions builds an optimized polynomial with its base elements belonging to the list of $M$ kernel functions selected from a list of $N$ available base kernel functions. The kernels are based on the selection available from the _scikit-learn_ package at [Gaussian process kernels](https://scikit-learn.org/stable/modules/gaussian_process.html) and the optimization package is [_optuna_](https://optuna.readthedocs.io/en/stable/index.html).
 
 The generic polynomial that can be built is 
