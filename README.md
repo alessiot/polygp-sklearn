@@ -11,7 +11,9 @@ The library _polygp_ is based on the [Gaussian process kernels](https://scikit-l
 The structure of this repository is the following:
 
 polygp-sklearn/
+
 ├── polygp/ [the polygp source code for the package _polygp_]
+
 ├── notebooks/ [set of notebooks using _polygp_]
 
 *Future plan: work with other packages other than scikit-learn.*
