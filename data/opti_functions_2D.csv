@@ -1,0 +1,436 @@
+Function Name,link,lambda,xrange,zmin,zmax,markdown
+Adjiman's Function,/benchmarks/unconstrained/2-dimensions/113-adjiman-s-function,"f = lambda x: np.cos(x[:,0]) * np.sin(x[:,1]) - x[:,0] / (1 + x[:,1]**2)","[[-5, 5], [-5, 5]]","[(5, 0)]",[],$f(\mathbf{x}) = \cos(x_1) \sin(x_2) - \frac{x_1}{1 + x_2^2}$
+Aluffi-Pentini's (or Zirilli's) Function,/benchmarks/unconstrained/2-dimensions/26-aluffi-pentini-s-or-zirilli-s-function,"f = lambda x: 0.25*x[:,0]**4 - 0.5*x[:,0]**2 + 0.1*x[:,0] + 0.5*x[:,1]**2","[[-10, 10], [-10, 10]]","[(-1.046680576580755, 0)]",[],$f(\mathbf{x}) = 0.25x_0^4 - 0.5x_0^2 + 0.1x_0 + 0.5x_1^2$
+Banana Shape Function,/benchmarks/unconstrained/2-dimensions/48-banana-shape-function,"f = lambda x: -(100 / (10 * ((x[:,0] + 1)**2 - (x[:,1] + 1))**2 + x[:,0]**2 + 4))","[[-1.5, 1.5], [-2.5, 0.5]]","[(0, 0)]",There is no information about the global maxima in the provided code snippet.,$f(\mathbf{x}) = -\frac{100}{10((x_1 + 1)^2 - (x_2 + 1))^2 + x_1^2 + 4}$
+Bartels-Conn's Function,/benchmarks/unconstrained/2-dimensions/72-bartels-conn-s-function,"f = lambda x: np.abs(x[:,0]**2 + x[:,1]**2 + x[:,0]*x[:,1]) + np.abs(np.sin(x[:,0])) + np.abs(np.cos(x[:,1]))","[[-500, 500], [-500, 500]]","[(0, 0)]",[],$f(\mathbf{x}) = \left| x_1^2 + x_2^2 + x_1 x_2 \right| + \left| \sin(x_1) \right| + \left| \cos(x_2) \right|$
+Beale's Function,/benchmarks/unconstrained/2-dimensions/27-beale-s-function,"f = lambda x: ((1.5 - x[:,0] + x[:,0]*x[:,1])**2) + ((2.25 - x[:,0] + x[:,0]*x[:,1]**2)**2) + ((2.625 - x[:,0] + x[:,0]*x[:,1]**3)**2)","[[-4.5, 4.5], [-4.5, 4.5]]","[(3, 0.5)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \left(1.5 - x_1 + x_1 x_2\right)^2 + \left(2.25 - x_1 + x_1 x_2^2\right)^2 + \left(2.625 - x_1 + x_1 x_2^3\right)^2
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Biggs' EXP2 Function,/benchmarks/unconstrained/2-dimensions/123-biggs-exp2-function,"f = lambda x: np.sum([(np.exp(-k*x[:,0]/10)-5*np.exp(-k*x[:,1]/10)-np.exp(-k/10)+5*np.exp(-k))**2 for k in range(10)], axis=0)","[[0, 20], [0, 20]]","[(1, 10)]",[],"$The lambda function can be expressed in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = \left[ \sum_{k=0}^{9} \left( e^{-\frac{k x_{0}}{10}} - 5e^{-\frac{k x_{1}}{10}} - e^{-\frac{k}{10}} + 5e^{-k} \right)^2 \right]
+\]
+
+where $\mathbf{x}$ is a vector with components $x_{0}$ and $x_{1}$.$"
+Bird Function,/benchmarks/unconstrained/2-dimensions/29-bird-function,"f = lambda x: (x[:,0] - x[:,1])**2 + np.exp((1 - np.sin(x[:,0]))**2) * np.cos(x[:,1]) + np.exp((1 - np.cos(x[:,1]))**2) * np.sin(x[:,0])","[[-2*np.pi, 2*np.pi], [-2*np.pi, 2*np.pi]]","[(4.701055751981055, 3.152946019601391), (-1.582142172055011, -3.130246799635430)]",[],"$The lambda function `f` can be represented in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = (x_{i,0} - x_{i,1})^2 + e^{(1 - \sin(x_{i,0}))^2} \cos(x_{i,1}) + e^{(1 - \cos(x_{i,1}))^2} \sin(x_{i,0})
+\]
+
+where $\mathbf{x}$ is a matrix with rows indexed by $i$ and columns indexed by 0 and 1, and $x_{i,0}$ and $x_{i,1}$ represent the elements of the $i$-th row and 0-th/1-st column, respectively.$"
+Bohachevsky's Function No.01,/benchmarks/unconstrained/2-dimensions/10-bohachevsky-s-function-no-1,"f = lambda x: x[:,0]**2 + 2*x[:,1]**2 - 0.3*np.cos(3*np.pi*x[:,0]) - 0.4*np.cos(4*np.pi*x[:,1]) + 0.7","[[-10, 10], [-10, 10]]","[(0, 0)]",[],$f(\mathbf{x}) = x_1^2 + 2x_2^2 - 0.3\cos(3\pi x_1) - 0.4\cos(4\pi x_2) + 0.7$
+Bohachevsky's Function No.02,/benchmarks/unconstrained/2-dimensions/11-bohachevsky-s-function-no-2,"f = lambda x: x[:,0]**2 + 2*x[:,1]**2 - 0.3*np.cos(3*np.pi*x[:,0])*np.cos(4*np.pi*x[:,1]) + 0.3","[[-10, 10], [-10, 10]]","[(0, 0)]",[],$f(\mathbf{x}) = x_1^2 + 2x_2^2 - 0.3\cos(3\pi x_1)\cos(4\pi x_2) + 0.3$
+Bohachevsky's Function No.03,/benchmarks/unconstrained/2-dimensions/12-bohachevsky-s-function-no-3,"f = lambda x: x[:,0]**2 + 2*x[:,1]**2 - 0.3*np.cos(3*np.pi*x[:,0] + 4*np.pi*x[:,1])*np.cos(4*np.pi*x[:,1]) + 0.3","[[-10, 10], [-10, 10]]","[(0, 0)]",There is no information about the global maxima in the provided code snippet.,$f(\mathbf{x}) = x_1^2 + 2x_2^2 - 0.3 \cos(3\pi x_1 + 4\pi x_2)\cos(4\pi x_2) + 0.3$
+Booth's Function,/benchmarks/unconstrained/2-dimensions/30-booth-s-function,"f = lambda x: ((x[:,0] + 2*x[:,1] - 7)**2) + ((2*x[:,0] + x[:,1] - 5)**2)","[[-10, 10], [-10, 10]]","[(1, 3)]",[],$f(\mathbf{x}) = (x_1 + 2x_2 - 7)^2 + (2x_1 + x_2 - 5)^2$
+Branin's RCOS Function No.01,/benchmarks/unconstrained/2-dimensions/13-branin-s-rcos-function-no-1,"f = lambda x: (x[:,1] - (5.1/(4*np.pi**2))*x[:,0]**2 + (5/np.pi)*x[:,0] - 6)**2 + 10*(1 - (1/(8*np.pi)))*np.cos(x[:,0]) + 10","[[-5, 10], [0, 15]]","[(-np.pi, 12.275), (np.pi, 2.275), (9.42478, 2.475)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \left( x_{i,1} - \frac{5.1}{4\pi^2}x_{i,0}^2 + \frac{5}{\pi}x_{i,0} - 6 \right)^2 + 10\left(1 - \frac{1}{8\pi}\right)\cos(x_{i,0}) + 10
+\]
+
+where $\mathbf{x}$ is a matrix with rows indexed by $i$ and columns indexed by $0$ and $1$, and $x_{i,0}$ and $x_{i,1}$ represent the elements in the $i$-th row and $0$-th/1st column, respectively.$"
+Branin's RCOS Function No.02,/benchmarks/unconstrained/2-dimensions/137-branin-s-rcos-function-no-2,"f = lambda x: -1 / (1 * (x[:, 1] - (5.1 / (4 * np.pi ** 2)) * x[:, 0] ** 2 + (5 / np.pi) * x[:, 0] - 6) ** 2 + (10 * (1 - (1 / (8 * np.pi))) * np.cos(x[:, 0]) * np.cos(x[:, 1])) + np.log(x[:, 0] ** 2 + x[:, 1] ** 2 + 1) + 10)","[[-5, 10], [0, 15]]","[(-3.196988423389338, 12.526257883092258)]",[],"$\[
+f(\mathbf{x}) = -\frac{1}{1 \cdot \left(\mathbf{x}_2 - \frac{5.1}{4\pi^2}\mathbf{x}_1^2 + \frac{5}{\pi}\mathbf{x}_1 - 6\right)^2 + 10\left(1 - \frac{1}{8\pi}\right)\cos(\mathbf{x}_1)\cos(\mathbf{x}_2) + \log(\mathbf{x}_1^2 + \mathbf{x}_2^2 + 1) + 10}
+\]$"
+Brent's Function,/benchmarks/unconstrained/2-dimensions/112-brent-s-function,"f = lambda x: (x[:,0]+10)**2 + (x[:,1]+10)**2 + np.exp(-x[:,0]**2 - x[:,1]**2)","[[-10, 10], [-10, 10]]","[(-10, -10)]",[],$f(\mathbf{x}) = (x_1 + 10)^2 + (x_2 + 10)^2 + e^{-(x_1^2 + x_2^2)}$
+Bukin's Function No.04,/benchmarks/unconstrained/2-dimensions/51-bukin-s-function-no-4,"f = lambda x: 100*x[:,1]**2 + 0.01*np.abs(x[:,0]+10)","[[-15, -5], [-3, 3]]","[(-10, 0)]",[],$f(\mathbf{x}) = 100x_1^2 + 0.01 |x_0 + 10|$
+Bukin's Function No.06,/benchmarks/unconstrained/2-dimensions/52-bukin-s-function-no-6,"f = lambda x: 100*np.sqrt(np.abs(x[:,1]-0.01*x[:,0]**2)) + 0.01*np.abs(x[:,0]+10)","[[-15, -5], [-3, 3]]","[(-10, 1)]",[],$f(\mathbf{x}) = 100 \sqrt{\left| x_2 - 0.01x_1^2 \right|} + 0.01 \left| x_1 + 10 \right|$
+Camel Function,/benchmarks/unconstrained/2-dimensions/31-camel-function,"f = lambda x: -((-x[:,0]**4 + 4.5*x[:,0]**2 + 2) / (np.exp(2*x[:,1]**2)))","[[-2, 2], [-2, 2]]","[(-1.5, 0), (1.5, 0)]",[],$f(x) = -\left(\frac{-x_0^4 + 4.5x_0^2 + 2}{e^{2x_1^2}}\right)$
+Carrom Table Function,/benchmarks/unconstrained/2-dimensions/32-carrom-table-function,"f = lambda x: (-1/30)*np.exp(2*np.abs(1-(np.sqrt(x[:,0]**2+x[:,1]**2)/np.pi)))*(np.cos(x[:,0])**2)*(np.cos(x[:,1])**2)","[[-10, 10], [-10, 10]]","[(9.646157266348881, 9.646157266348881), (-9.646157266348881, 9.646157266348881), (9.646157266348881, -9.646157266348881), (-9.646157266348881, -9.646157266348881)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -\frac{1}{30} e^{2\left|1 - \frac{\sqrt{x_1^2 + x_2^2}}{\pi}\right|} \cos^2(x_1) \cos^2(x_2)
+\]
+
+where $\mathbf{x} = (x_1, x_2)$ is a vector in $\mathbb{R}^2$.$"
+Chen's Bird Function,/benchmarks/unconstrained/2-dimensions/111-chen-s-bird-function,"f = lambda x: 0.001 / (0.001**2 + (x[:,0]**2 + x[:,1]**2 - 1)**2) + 0.001 / (0.001**2 + (x[:,0]**2 + x[:,1]**2 - 0.5)**2) + 0.001 / (0.001**2 + (x[:,0] - x[:,1])**2)","[[-1.5, 1], [-1.5, 1]]","[(0.5, 0.5)]","[(0.5, 0.5)]","$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \frac{0.001}{0.001^2 + (x_1^2 + x_2^2 - 1)^2} + \frac{0.001}{0.001^2 + (x_1^2 + x_2^2 - 0.5)^2} + \frac{0.001}{0.001^2 + (x_1 - x_2)^2}
+\]
+
+where $\mathbf{x}$ is a vector with components $x_1$ and $x_2$, corresponding to `x[:,0]` and `x[:,1]` in the original lambda function.$"
+Chen's V Function,/benchmarks/unconstrained/2-dimensions/110-chen-s-v-function,"f = lambda x: 0.001 / (0.001**2 + (x[:,0] - 0.4*x[:,1] - 0.1)**2) + 0.001 / (0.001**2 + (2*x[:,0] + x[:,1] - 1.5)**2)","[[-500, 500], [-500, 500]]",[],"[(0.388888888888889, 0.722222222222222)]",$f(\mathbf{x}) = \frac{0.001}{0.001^2 + (x_1 - 0.4x_2 - 0.1)^2} + \frac{0.001}{0.001^2 + (2x_1 + x_2 - 1.5)^2}$
+Chichinadze's Function,/benchmarks/unconstrained/2-dimensions/42-chichinadze-s-function,"f = lambda x: x[:,0]**2 - 12*x[:,0] + 8*np.sin(5*np.pi*x[:,0]/2) + 10*np.cos(np.pi*x[:,0]/2) + 11 - (0.2*np.sqrt(5)/np.exp(0.5*(x[:,1]-0.5)**2))","[[-30, 30], [-30, 30]]","[(6.189866586965680, 0.5)]",[],$f(\mathbf{x}) = x_1^2 - 12x_1 + 8\sin\left(\frac{5\pi x_1}{2}\right) + 10\cos\left(\frac{\pi x_1}{2}\right) + 11 - \left(\frac{0.2\sqrt{5}}{\exp\left(0.5(x_2 - 0.5)^2\right)}\right)$
+Complex Function,/benchmarks/unconstrained/2-dimensions/43-complex-function,"f = lambda x: (x[:,0]**3 - 3*x[:,0]*x[:,1]**2 - 1)**2 + (3*x[:,1]*x[:,0]**2 - x[:,1]**3)**2","[[-2, 2], [-2, 2]]","[(1, 0)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \left( x_{1}^3 - 3x_{1}x_{2}^2 - 1 \right)^2 + \left( 3x_{2}x_{1}^2 - x_{2}^3 \right)^2
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_{1} \) and \( x_{2} \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Cross-In Tray Function,/benchmarks/unconstrained/2-dimensions/44-cross-in-tray-function,"f = lambda x: -0.0001 * (np.abs(np.exp(np.abs(100 - (np.sqrt(x[:,0]**2 + x[:,1]**2) / np.pi))) * np.sin(x[:,0]) * np.sin(x[:,1])) + 1) ** 0.1","[[-15, 15], [-15, 15]]","[(1.349406608602084, 1.349406608602084), (-1.349406608602084, 1.349406608602084), (1.349406608602084, -1.349406608602084), (-1.349406608602084, -1.349406608602084)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -0.0001 \left( \left| \exp\left( \left| 100 - \frac{\sqrt{x_0^2 + x_1^2}}{\pi} \right| \right) \sin(x_0) \sin(x_1) \right| + 1 \right)^{0.1}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Cross-Leg Table Function,/benchmarks/unconstrained/2-dimensions/45-cross-leg-table-function,"f = lambda x: -1 / ((np.abs(np.exp(np.abs(100 - (np.sqrt(x[:,0]**2 + x[:,1]**2) / np.pi))) * np.sin(x[:,0]) * np.sin(x[:,1])) + 1) ** 0.1)","[[-10, 10], [-10, 10]]","[(0, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -\frac{1}{\left(\left|\exp\left(\left|100 - \frac{\sqrt{x_0^2 + x_1^2}}{\pi}\right|\right) \cdot \sin(x_0) \cdot \sin(x_1)\right| + 1\right)^{0.1}}
+\]$"
+Crowned Cross Function,/benchmarks/unconstrained/2-dimensions/46-crowned-cross-function,"f = lambda x: 0.0001 * (np.abs(np.exp(np.abs(100 - (np.sqrt(x[:,0]**2 + x[:,1]**2) / np.pi))) * np.sin(x[:,0]) * np.sin(x[:,1])) + 1) ** 0.1","[[-10, 10], [-10, 10]]","[(0, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = 0.0001 \left( \left| \exp\left( \left| 100 - \frac{\sqrt{x_0^2 + x_1^2}}{\pi} \right| \right) \sin(x_0) \sin(x_1) \right| + 1 \right)^{0.1}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Cube Function,/benchmarks/unconstrained/2-dimensions/119-cube-function,"f = lambda x: 100*(x[:,1]-x[:,0]**3)**2 + (1-x[:,0])**2","[[-10, 10], [-10, 10]]","[(1, 1)]",[],$f(\mathbf{x}) = 100 \cdot (x_2 - x_1^3)^2 + (1 - x_1)^2$
+Damavandi's Function,/benchmarks/unconstrained/2-dimensions/120-damavandi-s-function,"f = lambda x: (1 - (abs((np.sin(np.pi * (x[:,0] - 2)) * np.sin(np.pi * (x[:,1] - 2))) / (np.pi * np.pi * (x[:,0] - 2) * (x[:,1] - 2))))**5) * (2 + (x[:,0] - 7)**2 + 2 * (x[:,1] - 7)**2)","[[0, 14], [0, 14]]","[(2, 2)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = \left(1 - \left|\frac{\sin(\pi (x_1 - 2)) \cdot \sin(\pi (x_2 - 2))}{\pi^2 (x_1 - 2)(x_2 - 2)}\right|^5\right) \cdot \left(2 + (x_1 - 7)^2 + 2(x_2 - 7)^2\right)
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_1\) and \(x_2\), corresponding to the first and second elements of the input array \(x\) respectively.$"
+Davis' Function,/benchmarks/unconstrained/2-dimensions/47-davis-function,"f = lambda x: ((x[:,0]**2 + x[:,1]**2)**0.25) * ((np.sin(50 * (3*x[:,0]**2 + x[:,1]**2)**0.1))**2 + 1)","[[-100, 100], [-100, 100]]","[(0, 0)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \left( x_1^2 + x_2^2 \right)^{\frac{1}{4}} \left( \sin\left( 50 \left( 3x_1^2 + x_2^2 \right)^{\frac{1}{10}} \right)^2 + 1 \right)
+\]
+
+where $\mathbf{x}$ is a vector with components $x_1$ and $x_2$.$"
+Dekker-Aarts' Function,/benchmarks/unconstrained/2-dimensions/53-dekker-aarts-function,"f = lambda x: 10**5 * x[:,0]**2 + x[:,1]**2 - (x[:,0]**2 + x[:,1]**2)**2 + 10**-5 * (x[:,0]**2 + x[:,1]**2)**4","[[-20, 20], [-20, 20]]","[(0, 15), (0, -15)]",[],$f(\mathbf{x}) = 10^5 x_0^2 + x_1^2 - (x_0^2 + x_1^2)^2 + 10^{-5} (x_0^2 + x_1^2)^4$
+Downhill Step Function,/benchmarks/unconstrained/2-dimensions/114-downhill-step-function,"f = lambda x: np.floor(10 * (10 - np.exp(-x[:,0]**2 - 3*x[:,1]**2))) / 10","[[-10, 10], [-10, 10]]","[(0, 0)]",[],"$The lambda function can be expressed in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = \left\lfloor 10 \left(10 - e^{-x_1^2 - 3x_2^2}\right) \right\rfloor \div 10
+\]
+
+where $\mathbf{x} = (x_1, x_2)$ is a vector input to the function, $\lfloor \cdot \rfloor$ denotes the floor function, and $e$ is the base of the natural logarithm.$"
+Drop-Wave Function,/benchmarks/unconstrained/2-dimensions/54-drop-wave-function,"f = lambda x: -(1 + np.cos(12 * np.sqrt(x[:, 0]**2 + x[:, 1]**2))) / (0.5 * (x[:, 0]**2 + x[:, 1]**2) + 2)","[[-5.12, 5.12], [-5.12, 5.12]]","[(0, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -\frac{1 + \cos\left(12 \sqrt{x_1^2 + x_2^2}\right)}{0.5 \left(x_1^2 + x_2^2\right) + 2}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_1\) and \(x_2\), corresponding to the first and second elements of the input array \(x\), respectively.$"
+Easom's Function,/benchmarks/unconstrained/2-dimensions/22-easom-s-function,"f = lambda x: -np.cos(x[:, 0]) * np.cos(x[:, 1]) * np.exp(-(x[:, 0] - np.pi)**2 - (x[:, 1] - np.pi)**2)","[[-10, 10], [-10, 10]]","[(pi, pi)]",[],$f(\mathbf{x}) = -\cos(x_1) \cos(x_2) e^{-(x_1 - \pi)^2 - (x_2 - \pi)^2}$
+Egg Crate Function,/benchmarks/unconstrained/2-dimensions/122-egg-crate-function,"f = lambda x: x[:,0]**2 + x[:,1]**2 + 25*(np.sin(x[:,0])**2 + np.sin(x[:,1])**2)","[[-5, 5], [-5, 5]]","[(0, 0)]","[(-5, -5), (-5, 5), (5, -5), (5, 5)]",$f(\mathbf{x}) = x_1^2 + x_2^2 + 25(\sin^2(x_1) + \sin^2(x_2))$
+El-Attar-Vidyasagar-Dutta's Function,/benchmarks/unconstrained/2-dimensions/121-el-attar-vidyasagar-dutta-s-function,"f = lambda x: (x[:,0]**2 + x[:,1] - 10)**2 + (x[:,0] + x[:,1]**2 - 7)**2 + (x[:,0]**2 + x[:,1]**3 - 1)**2","[[-500, 500], [-500, 500]]","[(3.4091868222, -2.1714330361)]",[],$f(\mathbf{x}) = (x_1^2 + x_2 - 10)^2 + (x_1 + x_2^2 - 7)^2 + (x_1^2 + x_2^3 - 1)^2$
+Engvall's Function,/benchmarks/unconstrained/2-dimensions/116-engvall-s-function,"f = lambda x: x[:,0]**4 + x[:,1]**4 + 2*x[:,0]**2*x[:,1]**2 - 4*x[:,0] + 3","[[-2000, 2000], [-2000, 2000]]","[(1, 0)]",[],$f(\mathbf{x}) = x_1^4 + x_2^4 + 2x_1^2x_2^2 - 4x_1 + 3$
+F26 Function,/benchmarks/unconstrained/2-dimensions/253-f26-function,"f = lambda x: 0.25*x[:,0]**4 - 0.5*x[:,0]**2 - 0.1*x[:,0] + 0.5*x[:,1]**2","[[-10, 10], [-10, 10]]","[(1.046680526600663, 0)]",[],$f(\mathbf{x}) = 0.25x_0^4 - 0.5x_0^2 - 0.1x_0 + 0.5x_1^2$
+Freudenstein-Roth's Function,/benchmarks/unconstrained/2-dimensions/55-freudenstein-roth-s-function,"f = lambda x: ( (-13 + x[:,0] + ((5 - x[:,1]) * x[:,1] - 2) * x[:,1])**2 + (-29 + x[:,0] + ((x[:,1] + 1) * x[:,1] - 14) * x[:,1])**2 ).reshape(x.shape[0], 1)","[[-5, 5], [-5, 5]]","[(5, 4)]",[],"$The lambda function `f` can be converted into the following mathematical expression in LaTeX syntax:
+
+```latex
+f(\mathbf{x}) = \left( \left( -13 + x_0 + \left(5 - x_1\right) x_1 - 2 \right) x_1 \right)^2 + \left( \left( -29 + x_0 + \left(x_1 + 1\right) x_1 - 14 \right) x_1 \right)^2
+```
+
+Here, `x_0` and `x_1` represent the first and second elements of the vector `x` respectively.$"
+Giunta's Function,/benchmarks/unconstrained/2-dimensions/154-giunta-s-function,"f = lambda x: 0.6 + (np.sin(1 - (16/15)*x[:,0])**2 + np.sin(1 - (16/15)*x[:,1])**2) - 0.02*(np.sin(4 - (64/15)*x[:,0]) + np.sin(4 - (64/15)*x[:,1])) - (np.sin(1 - (16/15)*x[:,0]) + np.sin(1 - (16/15)*x[:,1]))","[[-1, 1], [-1, 1]]","[(0.4673200277395354, 0.4673200169591304)]",[],"$The lambda function `f` can be represented in LaTeX syntax as follows:
+
+```latex
+f(\mathbf{x}) = 0.6 + \left( \sin\left(1 - \frac{16}{15}x_1\right)^2 + \sin\left(1 - \frac{16}{15}x_2\right)^2 \right) - 0.02 \left( \sin\left(4 - \frac{64}{15}x_1\right) + \sin\left(4 - \frac{64}{15}x_2\right) \right) - \left( \sin\left(1 - \frac{16}{15}x_1\right) + \sin\left(1 - \frac{16}{15}x_2\right) \right)
+```
+
+Where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Goldstein-Price's Function,/benchmarks/unconstrained/2-dimensions/14-goldstein-price-s-function,"f = lambda x: (1+((x[:,0]+x[:,1]+1)**2)*(19-14*x[:,0]+3*x[:,0]**2-14*x[:,1]+6*x[:,0]*x[:,1]+3*x[:,1]**2))*(30+((2*x[:,0]-3*x[:,1])**2)*(18-32*x[:,0]+12*x[:,0]**2+48*x[:,1]-36*x[:,0]*x[:,1]+27*x[:,1]**2))/(3*10**5)","[[-2, 2], [-2, 2]]","[(0, -1)]",[],"$The lambda function `f` can be converted into the following LaTeX expression:
+
+```latex
+f(\mathbf{x}) = \frac{\left(1 + \left((x_1 + x_2 + 1)^2\right) \left(19 - 14x_1 + 3x_1^2 - 14x_2 + 6x_1x_2 + 3x_2^2\right)\right) \left(30 + \left((2x_1 - 3x_2)^2\right) \left(18 - 32x_1 + 12x_1^2 + 48x_2 - 36x_1x_2 + 27x_2^2\right)\right)}{3 \times 10^5}
+```
+
+Where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the original lambda function, respectively.$"
+Gramacy-Lee's Function No.02,/benchmarks/unconstrained/2-dimensions/259-gramacy-lee-s-function-no-02,"f = lambda x: x[:, 0] * np.exp(-x[:, 0]**2 - x[:, 1]**2)","[[-1.5, 1.5], [-1.5, 1.5]]","[(-0.707106776321847, -3.324529260087811e-009)]","[(0.707106776321847, -3.324529260087811e-009)]",$f(\mathbf{x}) = x_1 e^{-(x_1^2 + x_2^2)}$
+Gramacy-Lee's Function No.03,/benchmarks/unconstrained/2-dimensions/260-gramacy-lee-s-function-no-03,"f = lambda x: -np.exp(-(x[:,0]-1)**2) * np.exp(-(x[:,1]-1)**2) - np.exp(-0.8*(x[:,0]+1)**2) * np.exp(-0.8*(x[:,1]+1)**2) + 0.05 * np.sin(8*(x[:,0]+0.1)) * np.sin(8*(x[:,1]+0.1))","[[-1.5, 1.5], [-1.5, 1.5]]","[(-1.040825908416920, -1.040825908416920)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+```latex
+f(\mathbf{x}) = -\exp\left(-(x_1 - 1)^2\right) \exp\left(-(x_2 - 1)^2\right) - \exp\left(-0.8(x_1 + 1)^2\right) \exp\left(-0.8(x_2 + 1)^2\right) + 0.05 \sin(8(x_1 + 0.1)) \sin(8(x_2 + 0.1))
+```
+
+Here, $\mathbf{x}$ is a vector with components $x_1$ and $x_2$, corresponding to `x[:,0]` and `x[:,1]` in the original lambda function, respectively.$"
+H1 Function,/benchmarks/unconstrained/2-dimensions/155-h1-filter,"f = lambda x: (np.sin(x[:,0]-x[:,1]/8)**2 + np.sin(x[:,1]+x[:,0]/8)**2) / (np.sqrt((x[:,0]-(36*np.pi/13))**2 + (x[:,1]-(28*np.pi/13))**2) + 1)","[[-25, 25], [-25, 25]]",[],"[(36*np.pi/13, 28*np.pi/13)]","$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = \frac{\sin^2\left(x_0 - \frac{x_1}{8}\right) + \sin^2\left(x_1 + \frac{x_0}{8}\right)}{\sqrt{\left(x_0 - \frac{36\pi}{13}\right)^2 + \left(x_1 - \frac{28\pi}{13}\right)^2} + 1}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Himmelblau's Function,/benchmarks/unconstrained/2-dimensions/56-himmelblau-s-function,"f = lambda x: ((x[:,0] + x[:,1]**2 - 7)**2) + ((x[:,0]**2 + x[:,1] - 11)**2)","[[-6, 6], [-6, 6]]","[(3, 2), (3.584428340330, -1.848126526964), (-3.779310253378, -3.283185991286), (-2.805118086953, 3.131312518250)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \left( x_{1} + x_{2}^2 - 7 \right)^2 + \left( x_{1}^2 + x_{2} - 11 \right)^2
+\]
+
+where $\mathbf{x}$ is a vector with components $x_{1}$ and $x_{2}$, corresponding to `x[:,0]` and `x[:,1]` in the lambda function, respectively.$"
+Holder-Table Function,/benchmarks/unconstrained/2-dimensions/57-holder-table-function,"f = lambda x: -np.abs(np.exp(np.abs(1 - (np.sqrt(x[:,0]**2 + x[:,1]**2) / np.pi))) * np.sin(x[:,0]) * np.cos(x[:,1]))","[[-10, 10], [-10, 10]]","[(9.664590028909654, 9.664590028909654), (-9.664590028909654, -9.664590028909654)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -\left| e^{\left| 1 - \frac{\sqrt{x_0^2 + x_1^2}}{\pi} \right|} \sin(x_0) \cos(x_1) \right|
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Hosaki's Function,/benchmarks/unconstrained/2-dimensions/58-hosaki-s-function,"f = lambda x: (1 - 8*x[:,0] + 7*x[:,0]**2 - (7/3)*x[:,0]**3 + (1/4)*x[:,0]**4) * (x[:,1]**2) * np.exp(-x[:,1])","[[0, 5], [0, 5]]","[(4, 2)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = \left(1 - 8x_1 + 7x_1^2 - \frac{7}{3}x_1^3 + \frac{1}{4}x_1^4\right) \cdot x_2^2 \cdot e^{-x_2}
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Jennrich-Sampson's Function,/benchmarks/unconstrained/2-dimensions/134-jennrich-sampson-s-function,"f = lambda x: np.array([np.sum([(2 + 2*k - (np.exp(k*x[i,0]) + np.exp(k*x[i,1])))**2 for k in range(1, 11)]) for i in range(x.shape[0])]).reshape(-1, 1)","[[-1, 0.35], [-1, 0.35]]","[(0.25782521321500883, 0.25782521381356827)]",[],"$The lambda function can be expressed in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = \begin{bmatrix}
+\sum_{k=1}^{10} \left(2 + 2k - \left(e^{kx_{1,1}} + e^{kx_{1,2}}\right)\right)^2 \\
+\sum_{k=1}^{10} \left(2 + 2k - \left(e^{kx_{2,1}} + e^{kx_{2,2}}\right)\right)^2 \\
+\vdots \\
+\sum_{k=1}^{10} \left(2 + 2k - \left(e^{kx_{n,1}} + e^{kx_{n,2}}\right)\right)^2
+\end{bmatrix}
+\]
+
+where $\mathbf{x}$ is an $n \times 2$ matrix with rows $x_{i,1}$ and $x_{i,2}$ for $i = 1, \ldots, n$.$"
+Judge's Function,/benchmarks/unconstrained/2-dimensions/133-judge-s-function,"f = lambda x: np.array([sum([((x[i, 0] + B[k] * x[i, 1] + C[k] * x[i, 1]**2) - A[k])**2 for k in range(20)]) for i in range(x.shape[0])]).reshape(-1, 1)","[[-10, 10], [-10, 10]]","[(0.864787285816574, 1.235748499036571)]",[],"$\[
+f(\mathbf{x}) = \left[ \sum_{k=0}^{19} \left( (x_{i,0} + B_k x_{i,1} + C_k x_{i,1}^2) - A_k \right)^2 \right]_{i=0}^{N-1}
+\]
+
+where $\mathbf{x}$ is an $N \times 2$ matrix, $N$ is the number of rows in $\mathbf{x}$, and $A_k$, $B_k$, and $C_k$ are constants for $k = 0, 1, \ldots, 19$. The function $f$ returns an $N \times 1$ column vector.$"
+Keane's Function,/benchmarks/unconstrained/2-dimensions/135-keane-s-function,"f = lambda x: -((np.sin(x[:,0]-x[:,1]))**2)*((np.sin(x[:,0]+x[:,1]))**2)/np.sqrt(x[:,0]**2+x[:,1]**2)","[[0, 10], [0, 10]]","[(0, 1.393249070031784), (1.393249070031784, 0)]",[],"$The lambda function can be expressed in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = -\frac{(\sin(x_0 - x_1))^2 \cdot (\sin(x_0 + x_1))^2}{\sqrt{x_0^2 + x_1^2}}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Kearfott's Function,/benchmarks/unconstrained/2-dimensions/59-kearfott-s-function,"f = lambda x: ((x[:,0]**2 + x[:,1]**2 - 2)**2) + ((x[:,0]**2 - x[:,1]**2 - 1)**2)","[[-3, 4], [-3, 4]]","[(sqrt(1.5), sqrt(0.5)), (-sqrt(1.5), sqrt(0.5)), (sqrt(1.5), -sqrt(0.5)), (-sqrt(1.5), -sqrt(0.5))]",[],$f(\mathbf{x}) = (\mathbf{x}_{0}^{2} + \mathbf{x}_{1}^{2} - 2)^{2} + (\mathbf{x}_{0}^{2} - \mathbf{x}_{1}^{2} - 1)^{2}$
+Leon's Function,/benchmarks/unconstrained/2-dimensions/125-leon-s-function,"f = lambda x: 100*(x[:,1]-x[:,0]**3)**2 + (1-x[:,0])**2","[[-1.2, 1.2], [-1.2, 1.2]]","[(1, 1)]",[],"$The lambda function can be converted into the following mathematical expression using LaTeX syntax:
+
+\[
+f(\mathbf{x}) = 100 \cdot (x_2 - x_1^3)^2 + (1 - x_1)^2
+\]
+
+where $\mathbf{x}$ is a vector with components $x_1$ and $x_2$, corresponding to the first and second elements of the vector, respectively.$"
+Matyas' Function,/benchmarks/unconstrained/2-dimensions/60-matyas-function,"f = lambda x: 0.26 * (x[:, 0]**2 + x[:, 1]**2) - 0.48 * x[:, 0] * x[:, 1]","[[-10, 10], [-10, 10]]","[(0, 0)]",[],$f(\mathbf{x}) = 0.26 \cdot (x_1^2 + x_2^2) - 0.48 \cdot x_1 \cdot x_2$
+McCormick's Function,/benchmarks/unconstrained/2-dimensions/61-mccormick-s-function,"f = lambda x: -1.5*x[:,0] + 2.5*x[:,1] + (x[:,0] - x[:,1])**2 + np.sin(x[:,0] + x[:,1]) + 1","[[-1.5, 4], [-3, 4]]","[(-0.5471975602214493, -1.547197559268372)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = -1.5x_1 + 2.5x_2 + (x_1 - x_2)^2 + \sin(x_1 + x_2) + 1
+\]
+
+where $\mathbf{x}$ is a vector with components $x_1$ and $x_2$, corresponding to `x[:,0]` and `x[:,1]` in the lambda function, respectively.$"
+Mineshaft Function No.03,/benchmarks/unconstrained/2-dimensions/115-mineshaft-function-no-3,"f = lambda x: -5*np.exp(-1000*(x[:,0]-0.5)**2-1000*(x[:,1]-0.3)**2)-7*np.exp(-2000*(x[:,0]-0.8)**2-2000*(x[:,1]-1.3)**2)","[[-2, 2], [-2, 2]]","[(0.8, 1.3)]",[],$f(\mathbf{x}) = -5e^{-1000(x_1 - 0.5)^2 - 1000(x_2 - 0.3)^2} - 7e^{-2000(x_1 - 0.8)^2 - 2000(x_2 - 1.3)^2}$
+Mishra's Function No.03,/benchmarks/unconstrained/2-dimensions/138-mishra-s-function-no-3,"f = lambda x: np.abs(np.cos(np.sqrt(np.abs(x[:,0]**2 + x[:,1]**2))))**0.5 + (x[:,0] + x[:,1])/100","[[-10, 10], [-10, 10]]","[(8.466613775046579, -9.998521308999999)]",[],$f(\mathbf{x}) = \sqrt{|\cos(\sqrt{|x_0^2 + x_1^2|})|} + \frac{x_0 + x_1}{100}$
+Mishra's Function No.04,/benchmarks/unconstrained/2-dimensions/149-mishra-s-function-no-4,"f = lambda x: np.abs(np.sin(np.sqrt(np.abs(x[:,0]**2 + x[:,1]**2))))**0.5 + (x[:,0] + x[:,1])/100","[[-10, 10], [-10, 10]]","[(-9.941127263635860, -9.999571661999983)]",[],"$The lambda function can be expressed in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = \sqrt{|\sin(\sqrt{|x_0^2 + x_1^2|})|} + \frac{x_0 + x_1}{100}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Mishra's Function No.05,/benchmarks/unconstrained/2-dimensions/150-mishra-s-function-no-5,"f = lambda x: ((np.sin((np.cos(x[:,0]) + np.cos(x[:,1]))**2))**2 + (np.cos((np.sin(x[:,0]) + np.sin(x[:,1]))**2))**2 + x[:,0])**2 + 0.01*(x[:,0] + 10*x[:,1])","[[-10, 10], [-10, 10]]","[(-1.986820662153768, -10)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = \left( \sin^2\left( \left( \cos(x_1) + \cos(x_2) \right)^2 \right) + \cos^2\left( \left( \sin(x_1) + \sin(x_2) \right)^2 \right) + x_1 \right)^2 + 0.01 \cdot (x_1 + 10x_2)
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the original lambda function, respectively.$"
+Mishra's Function No.06,/benchmarks/unconstrained/2-dimensions/151-mishra-s-function-no-6,"f = lambda x: -np.log(((np.sin((np.cos(x[:,0])+np.cos(x[:,1]))**2))**2-(np.cos((np.sin(x[:,0])+np.sin(x[:,1]))**2))**2+x[:,0])**2)+0.1*((x[:,0]-1)**2+(x[:,1]-1)**2)","[[-10, 10], [-10, 10]]","[(2.886307215440481, 1.823260331422321)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -\log\left(\left(\sin^2\left(\cos(x_0) + \cos(x_1)\right)^2 - \cos^2\left(\sin(x_0) + \sin(x_1)\right)^2 + x_0\right)^2\right) + 0.1\left((x_0 - 1)^2 + (x_1 - 1)^2\right)
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_0 \) and \( x_1 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the original lambda function, respectively.$"
+Mishra's Function No.08 (or Decanomial Function),/benchmarks/unconstrained/2-dimensions/49-mishra-s-function-no-8-or-decanomial-function,"f = lambda x: 0.001 * (np.abs(x[:,0]**10 - 20*x[:,0]**9 + 180*x[:,0]**8 - 960*x[:,0]**7 + 3360*x[:,0]**6 - 8064*x[:,0]**5 + 13340*x[:,0]**4 - 15360*x[:,0]**3 + 11520*x[:,0]**2 - 5120*x[:,0] + 2624) + np.abs(x[:,1]**4 + 12*x[:,1]**3 + 54*x[:,1]**2 + 108*x[:,1] + 81))**2","[[-10, 10], [-10, 10]]","[(2, -3)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+```latex
+f(\mathbf{x}) = 0.001 \left( \left| x_1^{10} - 20x_1^{9} + 180x_1^{8} - 960x_1^{7} + 3360x_1^{6} - 8064x_1^{5} + 13340x_1^{4} - 15360x_1^{3} + 11520x_1^{2} - 5120x_1 + 2624 \right| + \left| x_2^{4} + 12x_2^{3} + 54x_2^{2} + 108x_2 + 81 \right| \right)^2
+```
+
+Where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the original lambda function, respectively.$"
+Mishra's Function No.10a (or SeqP Function No.01),/benchmarks/unconstrained/2-dimensions/152-mishra-s-function-no-10a-or-seqp-function-no-1,"f = lambda x: ((x[:,0] + x[:,1]) - (x[:,0] * x[:,1]))**2","[[-10, 10], [-10, 10]]","[(0, 0), (2, 2)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(x) = \left( (x_{:,0} + x_{:,1}) - (x_{:,0} \cdot x_{:,1}) \right)^2
+\]$"
+Mishra's Function No.10b (or SeqP Function No.02),/benchmarks/unconstrained/2-dimensions/153-mishra-s-function-no-10b-or-seqp-function-no-2,"f = lambda x: np.abs(x[:,0] + x[:,1] - x[:,0] * x[:,1]).reshape(len(x), 1)","[[-10, 10], [-10, 10]]","[(0, 0), (2, 2)]",[],"$The lambda function can be represented in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = \left| x_{i,0} + x_{i,1} - x_{i,0} x_{i,1} \right|
+\]
+
+for \( i = 1, 2, \ldots, n \), where \( n \) is the number of rows in matrix \( \mathbf{x} \), and \( x_{i,j} \) represents the element in the \( i \)-th row and \( j \)-th column of \( \mathbf{x} \). The result is a column vector with \( n \) entries.$"
+Modified Schaffer's Function No.01,/benchmarks/unconstrained/2-dimensions/96-modified-schaffer-s-function-no-1,"f = lambda x: 0.5 + ((np.sin(x[:,0]**2 + x[:,1]**2)**2 - 0.5) / (1 + 0.001 * (x[:,0]**2 + x[:,1]**2))**2)","[[-10, 10], [-10, 10]]","[(0, 0)]",[],$f(\mathbf{x}) = 0.5 + \left(\frac{\sin^2(\mathbf{x}_0^2 + \mathbf{x}_1^2) - 0.5}{(1 + 0.001(\mathbf{x}_0^2 + \mathbf{x}_1^2))^2}\right)$
+Modified Schaffer's Function No.02,/benchmarks/unconstrained/2-dimensions/97-modified-schaffer-s-function-no-2,"f = lambda x: 0.5 + ((np.sin(x[:, 0]**2 - x[:, 1]**2)**2 - 0.5) / (1 + 0.001 * (x[:, 0]**2 + x[:, 1]**2))**2)","[[-10, 10], [-10, 10]]","[(0, 0)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = 0.5 + \frac{\sin^2(x_0^2 - x_1^2) - 0.5}{(1 + 0.001 \cdot (x_0^2 + x_1^2))^2}
+\]
+
+where $\mathbf{x}$ is a vector with components $x_0$ and $x_1$.$"
+Modified Schaffer's Function No.03,/benchmarks/unconstrained/2-dimensions/98-modified-schaffer-s-function-no-3,"f = lambda x: 0.5 + ((np.sin(np.cos(np.abs(x[:,0]**2 - x[:,1]**2)))**2 - 0.5) / (1 + 0.001 * (x[:,0]**2 + x[:,1]**2))**2)","[[-10, 10], [-10, 10]]","[(0, 1.253114962205510), (0, -1.253114962205510), (1.253114962205510, 0), (-1.253114962205510, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = 0.5 + \frac{\left(\sin^2\left(\cos\left(\left|x_0^2 - x_1^2\right|\right)\right) - 0.5\right)}{\left(1 + 0.001 \cdot \left(x_0^2 + x_1^2\right)\right)^2}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\), corresponding to the first and second elements of the vector \(x\) in the original lambda function.$"
+Modified Schaffer's Function No.04,/benchmarks/unconstrained/2-dimensions/99-modified-schaffer-s-function-no-4,"f = lambda x: 0.5 + ((np.cos(np.sin(np.abs(x[:,0]**2 - x[:,1]**2)))**2 - 0.5) / (1 + 0.001 * (x[:,0]**2 + x[:,1]**2))**2)","[[-10, 10], [-10, 10]]","[(0, 1.253131828792882), (0, -1.253131828792882), (1.253131828792882, 0), (-1.253131828792882, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = 0.5 + \frac{\left(\cos\left(\sin\left(\left|x_{0}^{2} - x_{1}^{2}\right|\right)\right)^2 - 0.5\right)}{\left(1 + 0.001 \cdot \left(x_{0}^{2} + x_{1}^{2}\right)\right)^2}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Muller-Browns' Surface Function,/benchmarks/unconstrained/2-dimensions/62-muller-browns-surface-function,"f = lambda x: (-200)*np.exp(-((x[:,0]-1)**2) - 10*((x[:,1])**2)) - 100*np.exp(-((x[:,0])**2) - 10*((x[:,1]-0.5)**2)) - 170*np.exp(-6.5*((x[:,0]+0.5)**2) + 11*((x[:,0]+0.5)*(x[:,1]-1.5)) - 6.5*((x[:,1]-1.5)**2)) + 15*np.exp(0.7*((x[:,0]+1)**2) + 0.6*((x[:,0]+1)*(x[:,1]-1)) + 0.7*((x[:,1]-1)**2))","[[-1.5, 1], [-0.5, 2.5]]","[(-0.558223638251928, 1.441725828290487)]",[],"$The lambda function `f` can be converted into the following mathematical expression using LaTeX syntax:
+
+```latex
+f(\mathbf{x}) = -200 e^{-((x_1 - 1)^2) - 10(x_2^2)} - 100 e^{-((x_1)^2) - 10((x_2 - 0.5)^2)} - 170 e^{-6.5((x_1 + 0.5)^2) + 11((x_1 + 0.5)(x_2 - 1.5)) - 6.5((x_2 - 1.5)^2)} + 15 e^{0.7((x_1 + 1)^2) + 0.6((x_1 + 1)(x_2 - 1)) + 0.7((x_2 - 1)^2)}
+```
+
+Where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Parsopoulos' Function,/benchmarks/unconstrained/2-dimensions/252-parsopoulos-function,"f = lambda x: (np.cos(x[:,0])**2 + np.sin(x[:,1])**2).reshape(x.shape[0], 1)","[[-5, 5], [-5, 5]]","[(m*np.pi/2, n*np.pi) for m in [-1, 1, -3, 3, -5, 5, -7, 7, -9, 9, -11, 11] for n in range(-5, 6)]",[],"$The lambda function can be represented in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = \left( \cos^2(x_1) + \sin^2(x_2) \right)
+\]
+
+where $\mathbf{x}$ is a vector with components $x_1$ and $x_2$, corresponding to the first and second elements of the input array to the lambda function, respectively. The output is a column vector with the same number of rows as the input array.$"
+Peaks Function,/benchmarks/unconstrained/2-dimensions/63-peaks-function,"f = lambda x: (3*(1-x[:,0])**2)*np.exp(-(x[:,0]**2)-(x[:,1]+1)**2) - 10*(x[:,0]/5-x[:,0]**3-x[:,1]**5)*np.exp(-(x[:,0]**2)-(x[:,1]**2)) + (1/3)*np.exp(-((x[:,0]+1)**2)-(x[:,1]**2))","[[-4, 4], [-4, 4]]",[],"[(0.228279999979237, -1.625531071954464)]","$The lambda function `f` can be converted into the following mathematical expression using LaTeX syntax:
+
+\[
+f(\mathbf{x}) = (3(1-x_0)^2) e^{-(x_0^2)-(x_1+1)^2} - 10\left(\frac{x_0}{5}-x_0^3-x_1^5\right) e^{-(x_0^2)-(x_1^2)} + \frac{1}{3} e^{-((x_0+1)^2)-(x_1^2)}
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\), corresponding to the first and second elements of the vector, respectively.$"
+Pen-Holder Function,/benchmarks/unconstrained/2-dimensions/64-pen-holder-function,"f = lambda x: -np.exp(-1/np.abs(np.cos(x[:,0])*np.cos(x[:,1])*np.exp(np.abs(1-np.sqrt(x[:,0]**2+x[:,1]**2)/np.pi))))","[[-11, 11], [-11, 11]]","[(9.646167671043401, 9.646167671043401), (-9.646167671043401, 9.646167671043401), (9.646167671043401, -9.646167671043401), (-9.646167671043401, -9.646167671043401)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -\exp\left(-\frac{1}{\left|\cos(x_1) \cos(x_2) \exp\left(\left|1 - \frac{\sqrt{x_1^2 + x_2^2}}{\pi}\right|\right)\right|}\right)
+\]
+
+where $\mathbf{x} = (x_1, x_2)$ represents the input vector.$"
+Powell's Badly Scaled Function,/benchmarks/unconstrained/2-dimensions/65-powell-s-badly-scaled-function,"f = lambda x: (10000*x[:,0]*x[:,1]-1)**2 + (np.exp(-x[:,0]) + np.exp(-x[:,1]) - 1.0001)**2","[[-10, 10], [-10, 10]]","[(1.098e-5, 9.106)]",[],"$The lambda function can be represented in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = (10000 x_0 x_1 - 1)^2 + (e^{-x_0} + e^{-x_1} - 1.0001)^2
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\).$"
+Price's Function No.01 (or Becker-Lago's Function),/benchmarks/unconstrained/2-dimensions/28-becker-lago-s-function,"f = lambda x: (np.abs(x[:,0])-5)**2 + (np.abs(x[:,1])-5)**2","[[-10, 10], [-10, 10]]","[(5, 5), (-5, 5), (5, -5), (-5, -5)]",[],$f(\mathbf{x}) = (|\mathbf{x}_{0}|-5)^2 + (|\mathbf{x}_{1}|-5)^2$
+Price's Function No.02 (or Periodic Function),/benchmarks/unconstrained/2-dimensions/158-price-s-function-no-2,"f = lambda x: 1 + np.sin(x[:,0])**2 + np.sin(x[:,1])**2 - 0.1 * np.exp(-x[:,0]**2 - x[:,1]**2)","[[-10, 10], [-10, 10]]","[(0, 0)]",[],$f(\mathbf{x}) = 1 + \sin^2(x_0) + \sin^2(x_1) - 0.1e^{-(x_0^2 + x_1^2)}$
+Price's Function No.03 (Modified Rosenbrock's or Price-Rosenbrock's Function),/benchmarks/unconstrained/2-dimensions/160-price-s-function-no-3-modified-rosenbrock-s-or-price-rosenbrock-s-function,"f = lambda x: 100*(x[:,1]-x[:,0]**2)**2 + (6.4*(x[:,1]-0.5)**2 - x[:,0] - 0.6)**2","[[-5, 5], [-5, 5]]","[(0.341307503353524, 0.116490811845416), (1, 1)]",[],$f(\mathbf{x}) = 100 \left( x_{1} - x_{0}^2 \right)^2 + \left( 6.4 \left( x_{1} - 0.5 \right)^2 - x_{0} - 0.6 \right)^2$
+Price's Function No.04,/benchmarks/unconstrained/2-dimensions/159-price-s-function-no-4,"f = lambda x: (2*x[:,0]**3*x[:,1] - x[:,1]**3)**2 + (6*x[:,0] - x[:,1]**2 + x[:,1])**2","[[-500, 500], [-500, 500]]","[(0, 0), (2, 4), (1.464352119663698, -2.506012760781662)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = \left(2x_1^3 x_2 - x_2^3\right)^2 + \left(6x_1 - x_2^2 + x_2\right)^2
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_1\) and \(x_2\), corresponding to \(x[:,0]\) and \(x[:,1]\) in the lambda function, respectively.$"
+Quadratic Function,/benchmarks/unconstrained/2-dimensions/156-quadratic-function,"f = lambda x: -3803.84 - 138.08*x[:,0] - 232.92*x[:,1] + 128.08*x[:,0]**2 + 203.64*x[:,1]**2 + 182.25*x[:,0]*x[:,1]","[[-10, 10], [-10, 10]]","[(0.193880169366971, 0.485133920218833)]",[],"$The lambda function can be converted into the following mathematical expression using LaTeX syntax:
+
+\[
+f(\mathbf{x}) = -3803.84 - 138.08x_1 - 232.92x_2 + 128.08x_1^2 + 203.64x_2^2 + 182.25x_1x_2
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Rotated Ellipse Function No.01,/benchmarks/unconstrained/2-dimensions/126-rotated-ellipse-function-no-1,"f = lambda x: 7*x[:,0]**2 - 6*np.sqrt(3)*x[:,0]*x[:,1] + 13*x[:,1]**2","[[-500, 500], [-500, 500]]","[(0, 0)]",[],$f(x) = 7x_0^2 - 6\sqrt{3}x_0x_1 + 13x_1^2$
+Rotated Ellipse Function No.02,/benchmarks/unconstrained/2-dimensions/127-rotated-ellipse-function-no-2,"f = lambda x: x[:,0]**2 - x[:,0]*x[:,1] + x[:,1]**2","[[-500, 500], [-500, 500]]","[(0, 0)]",[],$f(\mathbf{x}) = x_1^2 - x_1 x_2 + x_2^2$
+Rump Function,/benchmarks/unconstrained/2-dimensions/128-rump-function,"f = lambda x: abs((333.75 - x[:,0]**2) * x[:,1]**6 + x[:,0]**2 * (11*x[:,0]**2 * x[:,1]**2 - 121*x[:,1]**4 - 2) + 5.5*x[:,1]**8 + x[:,0] / (2 + x[:,1]))","[[-500, 500], [-500, 500]]","[(0, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = \left| (333.75 - x_1^2) x_2^6 + x_1^2 (11x_1^2 x_2^2 - 121x_2^4 - 2) + 5.5x_2^8 + \frac{x_1}{2 + x_2} \right|
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the original lambda function, respectively.$"
+S2 Function,/benchmarks/unconstrained/2-dimensions/117-s2-function,"f = lambda x: 2 + (x[:,1] - 0.7)**2","[[-10, 10], [-10, 10]]","[(x1, 0.7) for x1 in range(-10, 11)]",[],$f(x) = 2 + (x_2 - 0.7)^2$
+S3 Function,/benchmarks/unconstrained/2-dimensions/118-s3-function,"f = lambda x: 2 + (x[:,1] - 0.7)**2 - np.arctan(x[:,0])","[[-10, 10], [-10, 10]]","[(10, 0.7)]",[],$f(\mathbf{x}) = 2 + (x_2 - 0.7)^2 - \arctan(x_1)$
+Sawtoothxy Function,/benchmarks/unconstrained/2-dimensions/66-sawtoothxy-function,"f = lambda x: ((np.sin(x[:,1]) - np.sin(2*x[:,1])/2 + np.sin(3*x[:,1])/3 - np.sin(4*x[:,1])/4 + 4) * x[:,1]**2 / (x[:,1] + 1)) * (np.cos(2*np.arctan2(x[:,1], x[:,0]) - 1/2)/2 + np.cos(np.arctan2(x[:,1], x[:,0])) + 2)","[[-20, 20], [-20, 20]]","[(0, 0)]",[],"$The lambda function `f` can be converted into the following LaTeX expression:
+
+```latex
+f(\mathbf{x}) = \left( \left( \sin(x_2) - \frac{\sin(2x_2)}{2} + \frac{\sin(3x_2)}{3} - \frac{\sin(4x_2)}{4} + 4 \right) \frac{x_2^2}{x_2 + 1} \right) \left( \frac{\cos(2 \arctan\left(\frac{x_2}{x_1}\right) - \frac{1}{2})}{2} + \cos(\arctan\left(\frac{x_2}{x_1}\right)) + 2 \right)
+```
+
+In this expression, `x` is assumed to be a vector where `x_1` is the first component and `x_2` is the second component.$"
+Schaffer's Function No.06,/benchmarks/unconstrained/2-dimensions/100-schaffer-s-function-no-6,"f = lambda x: 0.5 + ((np.sin(np.sqrt(x[:, 0]**2 + x[:, 1]**2))**2 - 0.5) / (1 + 0.001 * (x[:, 0]**2 + x[:, 1]**2))**2)","[[-100, 100], [-100, 100]]","[(0, 0)]",[],$f(\mathbf{x}) = 0.5 + \left(\frac{\sin^2\left(\sqrt{x_0^2 + x_1^2}\right) - 0.5}{\left(1 + 0.001 \cdot (x_0^2 + x_1^2)\right)^2}\right)$
+Schaffer's Function No.07,/benchmarks/unconstrained/2-dimensions/101-schaffer-s-function-no-7,"f = lambda x: ((x[:,0]**2 + x[:,1]**2)**0.25) * (50*((x[:,0]**2 + x[:,1]**2)**0.1) + 1)","[[-100, 100], [-100, 100]]","[(0, 0)]",[],$f(\mathbf{x}) = \left( x_0^2 + x_1^2 \right)^{0.25} \cdot \left( 50\left( x_0^2 + x_1^2 \right)^{0.1} + 1 \right)$
+Shekel's Foxholes Function,/benchmarks/unconstrained/2-dimensions/7-shekel-s-foxholes-function,"f = lambda x: (1/500 + sum([1/(k + (x[:,0]-a[0,k])**6 + (x[:,1]-a[1,k])**6) for k in range(25)]))**-1","[[-65.536, 65.536], [-65.536, 65.536]]","[(-31.97833, -31.97833)]",[],"$f(\mathbf{x}) = \left(\frac{1}{500} + \sum_{k=0}^{24} \frac{1}{k + (\mathbf{x}_{0} - a_{0,k})^6 + (\mathbf{x}_{1} - a_{1,k})^6}\right)^{-1}$"
+Six-Hump Camel-Back Function,/benchmarks/unconstrained/2-dimensions/23-six-hump-camel-back-function,"f = lambda x: 4*x[:,0]**2 - 2.1*x[:,0]**4 + (1/3)*x[:,0]**6 + x[:,0]*x[:,1] - 4*x[:,1]**2 + 4*x[:,1]**4","[[-2, 2], [-1, 1]]","[(0.08984201368301331, 0.7126564032704135), (-0.08984201368301331, -0.7126564032704135), (0.08984201368301331, -0.7126564032704135), (-0.08984201368301331, 0.7126564032704135)]",[],$f(\mathbf{x}) = 4x_1^2 - 2.1x_1^4 + \frac{1}{3}x_1^6 + x_1x_2 - 4x_2^2 + 4x_2^4$
+Stenger's Function,/benchmarks/unconstrained/2-dimensions/103-stenger-s-function,"f = lambda x: (x[:,0]**2 - 4*x[:,1])**2 + (x[:,1]**2 - 2*x[:,0] + 4*x[:,1])**2","[[-1, 4], [-1, 4]]","[(0, 0), (1.695415196279268, 0.718608171943623)]",[],$f(\mathbf{x}) = (x_1^2 - 4x_2)^2 + (x_2^2 - 2x_1 + 4x_2)^2$
+Storn's Function,/benchmarks/unconstrained/2-dimensions/102-storn-s-function,"f = lambda x: (10**m) * x[:,0]**2 + x[:,1]**2 - (x[:,0]**2 + x[:,1]**2)**2 + (10**-m) * (x[:,0]**2 + x[:,1]**2)**4","[[-2, 2], [-2, 2]]","[(0, -1.386952327146511), (0, 1.386952327146511), (0, -2.608906424592038), (0, 2.608906424592038), (0, -4.701739810796703), (0, 4.701739810796703)]",[],$f(\mathbf{x}) = 10^m x_0^2 + x_1^2 - (x_0^2 + x_1^2)^2 + 10^{-m} (x_0^2 + x_1^2)^4$
+Test-Tube Holder Function,/benchmarks/unconstrained/2-dimensions/104-test-tube-holder-function,"f = lambda x: -4*np.abs(np.exp(np.abs(np.cos((x[:,0]**2 + x[:,1]**2)/200)))*np.sin(x[:,0])*np.cos(x[:,1]))","[[-10, 10], [-10, 10]]","[(-np.pi/2, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -4 \left| \exp\left(\left| \cos\left(\frac{x_0^2 + x_1^2}{200}\right)\right|\right) \sin(x_0) \cos(x_1) \right|
+\]
+
+where \(\mathbf{x}\) is a vector with components \(x_0\) and \(x_1\), corresponding to \(x[:,0]\) and \(x[:,1]\) in the lambda function, respectively.$"
+Three-Cylinders Function,/benchmarks/unconstrained/2-dimensions/157-three-cylinders-function,"f = lambda x: np.select([np.sqrt((x[:,0]-3)**2+(x[:,1]-2)**2) <= 0.75, np.sqrt((x[:,0]-4)**2+(x[:,1]-4)**2) <= 0.375, np.sqrt((x[:,0]-1)**2+(x[:,1]-3)**2) <= 0.25], [1, 1.05, 1.05], default=0).reshape(x.shape[0], 1)","[[0, 5], [0, 5]]",[],"[(4, 4), (1, 3)]","$The lambda function `f` can be represented in LaTeX syntax as follows:
+
+```latex
+f(\mathbf{x}) = \left\{
+\begin{array}{ll}
+1 & \text{if } \sqrt{(x_1 - 3)^2 + (x_2 - 2)^2} \leq 0.75, \\
+1.05 & \text{if } \sqrt{(x_1 - 4)^2 + (x_2 - 4)^2} \leq 0.375, \\
+1.05 & \text{if } \sqrt{(x_1 - 1)^2 + (x_2 - 3)^2} \leq 0.25, \\
+0 & \text{otherwise}.
+\end{array}
+\right.
+```
+
+Where \(\mathbf{x}\) is a vector with components \(x_1\) and \(x_2\).$"
+Three-Hump Camel-Back Function,/benchmarks/unconstrained/2-dimensions/67-three-hump-camel-back-function,"f = lambda x: 2*x[:,0]**2 - 1.05*x[:,0]**4 + (1/6)*x[:,0]**6 + x[:,0]*x[:,1] + x[:,1]**2","[[-5, 5], [-5, 5]]","[(0, 0)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = 2x_1^2 - 1.05x_1^4 + \frac{1}{6}x_1^6 + x_1x_2 + x_2^2
+\]
+
+where \( \mathbf{x} \) is a vector with components \( x_1 \) and \( x_2 \), corresponding to \( x[:,0] \) and \( x[:,1] \) in the lambda function, respectively.$"
+Treccani's Function,/benchmarks/unconstrained/2-dimensions/70-treccani-s-function,"f = lambda x: x[:,0]**4 + 4*x[:,0]**3 + 4*x[:,0]**2 + x[:,1]**2","[[-5, 5], [-5, 5]]","[(-2, 0), (0, 0)]",[],$f(\mathbf{x}) = x_{1}^{4} + 4x_{1}^{3} + 4x_{1}^{2} + x_{2}^{2}$
+Trefethen's Function,/benchmarks/unconstrained/2-dimensions/105-trefethen-s-function,"f = lambda x: 0.25*x[:,0]**2 + 0.25*x[:,1]**2 + np.exp(np.sin(50*x[:,0])) - np.sin(10*x[:,0] + 10*x[:,1]) + np.sin(60*np.exp(x[:,1])) + np.sin(70*np.sin(x[:,0])) + np.sin(np.sin(80*x[:,1]))","[[-6.5, 6.5], [-4.5, 4.5]]","[(-0.02440307923, 0.2106124261)]",[],"$The lambda function can be converted into the following mathematical expression using LaTeX syntax:
+
+\[
+f(\mathbf{x}) = 0.25x_0^2 + 0.25x_1^2 + e^{\sin(50x_0)} - \sin(10x_0 + 10x_1) + \sin(60e^{x_1}) + \sin(70\sin(x_0)) + \sin(\sin(80x_1))
+\]
+
+where $\mathbf{x} = [x_0, x_1]$ is a vector with two components.$"
+Tripod Function,/benchmarks/unconstrained/2-dimensions/71-tripod-function,"f = lambda x: (x[:,1]>=0)*(1+(x[:,0]>=0)) + np.abs(x[:,0]+50*(x[:,1]>=0)*(1-2*(x[:,0]>=0))) + np.abs(x[:,1]+50*(1-2*(x[:,1]>=0)))","[[-100, 100], [-100, 100]]","[(0, -50)]",[],"$The lambda function `f` can be represented in LaTeX syntax as follows:
+
+\[
+f(\mathbf{x}) = (\mathbf{x}_{:,1} \geq 0) \cdot (1 + (\mathbf{x}_{:,0} \geq 0)) + \left| \mathbf{x}_{:,0} + 50 \cdot (\mathbf{x}_{:,1} \geq 0) \cdot (1 - 2 \cdot (\mathbf{x}_{:,0} \geq 0)) \right| + \left| \mathbf{x}_{:,1} + 50 \cdot (1 - 2 \cdot (\mathbf{x}_{:,1} \geq 0)) \right|
+\]
+
+Here, $\mathbf{x}$ is a matrix with at least two columns, $\mathbf{x}_{:,0}$ represents all elements in the first column, and $\mathbf{x}_{:,1}$ represents all elements in the second column. The comparison operators $\geq 0$ yield 1 if the condition is true and 0 otherwise. The absolute value is denoted by $\left| \cdot \right|$.$"
+Tsoulos' Function,/benchmarks/unconstrained/2-dimensions/106-tsoulos-function,"f = lambda x: x[:,0]**2 + x[:,1]**2 - np.cos(18*x[:,0]) - np.cos(18*x[:,1])","[[-1, 1], [-1, 1]]","[(0, 0)]","[(-1, -1), (-1, 1), (1, -1), (1, 1)]",$f(\mathbf{x}) = x_1^2 + x_2^2 - \cos(18x_1) - \cos(18x_2)$
+Ursem Function No.01,/benchmarks/unconstrained/2-dimensions/107-ursem-function-no-1,"f = lambda x: -np.sin(2*x[:,0]-0.5*np.pi)-3*np.cos(x[:,1])-0.5*x[:,0]","[[-2.5, 3], [-2, 2]]","[(1.697136443570341, 0)]",[],$f(\mathbf{x}) = -\sin(2x_1 - \frac{1}{2}\pi) - 3\cos(x_2) - \frac{1}{2}x_1$
+Ursem Function No.03,/benchmarks/unconstrained/2-dimensions/130-ursem-function-no-3,"f = lambda x: -np.sin(2.2*np.pi*x[:,0]+0.5*np.pi)*((3-np.abs(x[:,0]))/2)*((2-np.abs(x[:,1]))/2)-np.sin(0.5*np.pi*x[:,1]**2+0.5*np.pi)*((2-np.abs(x[:,0]))/2)*((2-np.abs(x[:,1]))/2)","[[-2, 2], [-1.5, 1.5]]","[(0, 0)]",[],"$The lambda function `f` can be converted into the following mathematical expression in LaTeX syntax:
+
+```latex
+f(\mathbf{x}) = -\sin\left(2.2\pi x_1 + 0.5\pi\right)\left(\frac{3 - |x_1|}{2}\right)\left(\frac{2 - |x_2|}{2}\right) - \sin\left(0.5\pi x_2^2 + 0.5\pi\right)\left(\frac{2 - |x_1|}{2}\right)\left(\frac{2 - |x_2|}{2}\right)
+```
+
+Where $\mathbf{x} = [x_1, x_2]^T$ is a vector with two components.$"
+Ursem Function No.04,/benchmarks/unconstrained/2-dimensions/131-ursem-function-no-4,"f = lambda x: -3*np.sin(0.5*np.pi*x[:,0]+0.5*np.pi)*((2-np.sqrt(x[:,0]**2+x[:,1]**2))/4)","[[-2, 2], [-2, 2]]","[(0, 0)]",[],$f(\mathbf{x}) = -3 \sin\left(\frac{\pi}{2} x_0 + \frac{\pi}{2}\right) \left(\frac{2 - \sqrt{x_0^2 + x_1^2}}{4}\right)$
+Ursem-Waves Function,/benchmarks/unconstrained/2-dimensions/132-ursem-wave-function,"f = lambda x: -(0.3*x[:,0])**3 + (x[:,1]**2 - 4.5*x[:,1]**2)*x[:,0]*x[:,1] + 4.7*np.cos(3*x[:,0] - (x[:,1]**2)*(2+x[:,0]))*np.sin(2.5*np.pi*x[:,0])","[[-0.9, 1.2], [-1.2, 1.2]]","[(-0.605689494589848, -1.177561933039789)]",[],"$The lambda function can be converted into the following LaTeX expression:
+
+\[
+f(\mathbf{x}) = -0.3^3 x_0^3 + (x_1^2 - 4.5 x_1^2) x_0 x_1 + 4.7 \cos(3 x_0 - x_1^2 (2 + x_0)) \sin(2.5 \pi x_0)
+\]
+
+where $\mathbf{x}$ is a vector with components $x_0$ and $x_1$.$"
+Venter and Sobiezcczanski-Sobieski's Function,/benchmarks/unconstrained/2-dimensions/108-venter-and-sobiezcczanski-sobieski-s-function,"f = lambda x: x[:,0]**2 - 100*np.cos(x[:,0])**2 - 100*np.cos(x[:,0]**2/30) + x[:,1]**2 - 100*np.cos(x[:,1])**2 - 100*np.cos(x[:,1]**2/30) + 1400","[[-50, 10], [-50, 10]]","[(0, 0)]",[],$f(\mathbf{x}) = x_1^2 - 100\cos^2(x_1) - 100\cos\left(\frac{x_1^2}{30}\right) + x_2^2 - 100\cos^2(x_2) - 100\cos\left(\frac{x_2^2}{30}\right) + 1400$
+Wayburn-Seader's Function No.01,/benchmarks/unconstrained/2-dimensions/277-wayburn-seader-s-function-no-01,"f = lambda x: (x[:,0]**6 + x[:,1]**4 - 17)**2 + (2*x[:,0] + x[:,1] - 4)**2","[[-5, 5], [-5, 5]]","[(1, 2), (1.596804153876933, 0.806391692246134)]",[],"$The lambda function can be converted into the following mathematical expression in LaTeX syntax:
+
+\[
+f(\mathbf{x}) = \left( x_{1}^{6} + x_{2}^{4} - 17 \right)^{2} + \left( 2x_{1} + x_{2} - 4 \right)^{2}
+\]
+
+where $\mathbf{x}$ is a vector with components $x_{1}$ and $x_{2}$ corresponding to `x[:,0]` and `x[:,1]` in the lambda function, respectively.$"
+Wayburn-Seader's Function No.02,/benchmarks/unconstrained/2-dimensions/278-wayburn-seader-s-function-no-02,"f = lambda x: (1.613 - 4*(x[:,0]-0.3125)**2 - 4*(x[:,1]-1.625)**2)**2 + (x[:,1]-1)**2","[[-500, 500], [-500, 500]]","[(0.200138974728779, 1), (0.424861025271221, 1)]",[],$f(\mathbf{x}) = \left(1.613 - 4(x_0 - 0.3125)^2 - 4(x_1 - 1.625)^2\right)^2 + (x_1 - 1)^2$
+Wayburn-Seader's Function No.03,/benchmarks/unconstrained/2-dimensions/279-wayburn-seader-s-function-no-03,"f = lambda x: 2*x[:,0]**3/3 - 8*x[:,0]**2 + 33*x[:,0] - x[:,0]*x[:,1] + 5 + ((x[:,0]-4)**2 + (x[:,1]-5)**2 - 4)**2","[[-500, 500], [-500, 500]]","[(5.146896745324582, 6.839589743000071)]",[],$f(\mathbf{x}) = \frac{2}{3}x_0^3 - 8x_0^2 + 33x_0 - x_0x_1 + 5 + \left((x_0 - 4)^2 + (x_1 - 5)^2 - 4\right)^2$
+Xin-She Yang's Function No.04,/benchmarks/unconstrained/2-dimensions/265-xin-she-yang-s-function-no-04,"f = lambda x: -5*np.exp(-beta*((x[:,0]-np.pi)**2+(x[:,1]-np.pi)**2))-np.sum(U*np.exp(-alpha*((x[:,0,None,None]-np.arange(K))**2+(x[:,1,None,None]-np.arange(K)[:,None])**2)), axis=(1,2))","[[0, 10], [0, 10]]","[(np.pi, np.pi)]","[(-10**2+5, -10**2+5)]","$The lambda function `f` can be converted into the following mathematical expression in LaTeX syntax:
+
+```latex
+f(\mathbf{x}) = -5e^{-\beta((x_1 - \pi)^2 + (x_2 - \pi)^2)} - \sum_{i=0}^{K-1}\sum_{j=0}^{K-1} U_{ij} e^{-\alpha((x_1 - i)^2 + (x_2 - j)^2)}
+```
+
+Here, $\mathbf{x}$ is a vector with components $x_1$ and $x_2$, and the indices $i$ and $j$ run over the range from $0$ to $K-1$. The variable $U_{ij}$ represents the elements of the matrix $U$.$"
+Zettl's Function,/benchmarks/unconstrained/2-dimensions/109-zettl-s-function,"f = lambda x: 0.25*x[:,0] + (x[:,0]**2 - 2*x[:,0] + x[:,1]**2)**2","[[-1, 5], [-1, 5]]","[(-0.02989597760285287, 0)]",[],$f(\mathbf{x}) = 0.25x_0 + (x_0^2 - 2x_0 + x_1^2)^2$
